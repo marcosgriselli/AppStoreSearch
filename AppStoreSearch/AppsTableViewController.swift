@@ -36,14 +36,12 @@ class AppsTableViewController: UITableViewController {
         guard let cell = cell as? AppTableViewCell else { return }
         cell.cancel()
     }
-    
-    func reset() {
-        dataTask?.cancel()
-        imagePrefetcher?.stop()
-        apps.removeAll()
-        tableView.reloadOnMainThread()
-    }
-    
+
+    /// Searches the input on https://itunes.apple.com/.
+    /// For the purpose of a simple blog post this is network call
+    /// is placed on the view controller.
+    ///
+    /// - Parameter term: <#term description#>
     func search(term: String) {
         dataTask?.cancel()
         let encodedTerm = term
@@ -61,6 +59,9 @@ class AppsTableViewController: UITableViewController {
         dataTask?.resume()
     }
     
+    /// Handles the networking response with the searched apps.
+    ///
+    /// - Parameter response: AppResponse retrieved from the network.
     private func handle(response: AppResponse) {
         apps = response.results
         let mediaUrls = apps

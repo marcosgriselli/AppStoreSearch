@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     func add(_ child: UIViewController) {
         addChildViewController(child)
-        child.view.centerIn(view: view, usingSafeArea: true)
+        child.view.centerIn(view: view)
         child.didMove(toParentViewController: self)
     }
 

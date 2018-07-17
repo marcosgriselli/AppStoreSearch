@@ -11,7 +11,6 @@ import UIKit
 class ResultsContainerViewController: ContentStateViewController {
     
     private var suggestionsViewController: SuggestedTermsTableViewController!
-    private let appsListViewController = AppsTableViewController()
     var didSelect: (String) -> Void = { _ in }
     
     override func viewDidLoad() {
@@ -21,13 +20,25 @@ class ResultsContainerViewController: ContentStateViewController {
         suggestionsViewController.didSelect = didSelect
     }
     
+    /// Manages the view controller that needs to be displayed.
+    ///
+    /// - Parameters:
+    ///   - term: term to search
+    ///   - searchType: type of search being performed.
     func handle(term: String, searchType: SearchType) {
+        
+        /// For this case both view controllers are already
+        /// properties of this class but we could create them
+        /// at this point and discard them when using a new one.
         switch searchType {
         case .partial:
             suggestionsViewController.searchedTerm = term
             transition(to: .render(suggestionsViewController))
         case .final:
-            appsListViewController.reset()
+            /// We create a new view controller because the
+            /// final search is a lot less frequent than the
+            /// active suggestions.
+            let appsListViewController = AppsTableViewController()
             appsListViewController.search(term: term)
             transition(to: .render(appsListViewController))
         }

@@ -21,6 +21,9 @@ class SearchViewController: UITableViewController {
         tableView.dataSource = trendingDataSourceDelegate
         tableView.delegate = trendingDataSourceDelegate
         trendingDataSourceDelegate.didSelect = search
+        /// Really important. Removing this avoids the TableView
+        /// from scrolling past the navigation bar so it bounces
+        /// and produces a strange bug.
         extendedLayoutIncludesOpaqueBars = true
         setSearchController()
         navigationController?.navigationBar.setShadow(hidden: true)
@@ -39,6 +42,10 @@ class SearchViewController: UITableViewController {
         definesPresentationContext = true
     }
     
+    /// A final search has been triggered either by tapping search, tapping
+    /// a trending term or tapping a suggestion.
+    ///
+    /// - Parameter term: Term to search on the App Store.
     private func search(term: String) {
         searchController.searchBar.text = term
         searchType = .final
