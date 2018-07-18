@@ -41,7 +41,7 @@ class AppsTableViewController: UITableViewController {
     /// For the purpose of a simple blog post this is network call
     /// is placed on the view controller.
     ///
-    /// - Parameter term: <#term description#>
+    /// - Parameter term: Term to search.
     func search(term: String) {
         dataTask?.cancel()
         let encodedTerm = term
