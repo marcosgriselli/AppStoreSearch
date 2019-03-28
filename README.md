@@ -10,7 +10,7 @@ This is the example project for my blog post on how to replicate the App Store s
 
 I added mock data for 'Instagram' search. All other terms will only display one of the trending topics. 
 
-The example should work in every device but I tested it against a phyical iPhone X. 
+The example should work in every device but I tested it against a physical iPhone X. 
 
 This is the final result: 
 
