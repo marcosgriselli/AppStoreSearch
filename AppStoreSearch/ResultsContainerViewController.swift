@@ -16,7 +16,7 @@ class ResultsContainerViewController: ContentStateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        suggestionsViewController = storyboard.instantiateViewController(withIdentifier: "SuggestedTermsTableViewController") as! SuggestedTermsTableViewController
+        suggestionsViewController = storyboard.instantiateViewController(withIdentifier: "SuggestedTermsTableViewController") as? SuggestedTermsTableViewController
         suggestionsViewController.didSelect = didSelect
     }
     
