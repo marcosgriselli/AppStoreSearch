@@ -1,16 +1,13 @@
 <div align="center">
 
-# App Store Search
-
-[<img src="./resources/banner.png" width="80%">](https://mar.codes/2018-07-17/Replicating-iOS-11-App-Store-search-tab)
+[<img src="./resources/banner.png" width="100%">](https://mar.codes/blog/appstore-search)
 <br>
-This is the example project for my blog post on how to replicate the App Store search tab using `UISearchController`. 
 
-[Replicating-iOS-11-App-Store-search-tab](https://mar.codes/2018-07-17/Replicating-iOS-11-App-Store-search-tab)
+</div>
 
-I added mock data for 'Instagram' search. All other terms will only display one of the trending topics. 
+Example project for my [blog post](https://mar.codes/blog/appstore-search) on how to replicate the App Store search tab using `UISearchController`. 
 
-The example should work in every device but I tested it against a physical iPhone X. 
+Suggested search terms will only work for 'Instagram'. All other terms will only display a single suggestion. 
 
 This is the final result: 
 
