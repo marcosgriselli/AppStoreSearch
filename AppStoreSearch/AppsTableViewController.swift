@@ -51,11 +51,11 @@ class AppsTableViewController: UITableViewController {
             guard let data = data else { return }
             do {
                 let response = try JSONDecoder().decode(AppResponse.self, from: data)
-               self.handle(response: response)
+                self.handle(response: response)
             } catch {
                 print(error)
             }
-            }
+        }
         dataTask?.resume()
     }
     
@@ -69,6 +69,8 @@ class AppsTableViewController: UITableViewController {
             .compactMap { URL(string: $0) }
         imagePrefetcher = ImagePrefetcher(urls: mediaUrls)
         imagePrefetcher?.start()
-        tableView.reloadOnMainThread()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

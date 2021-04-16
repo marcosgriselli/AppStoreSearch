@@ -13,7 +13,9 @@ class SuggestedTermsTableViewController: UITableViewController {
     var searchedTerm = String() {
         didSet {
             currentNames = namesWith(prefix: searchedTerm)
-            tableView.reloadOnMainThread()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     private var terms: [Term] = Bundle.main.loadJSONFile(named: "terms")

@@ -31,7 +31,6 @@
 		FB4D6F6220FAB1FC000F953A /* AppTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4D6F6020FAB1FC000F953A /* AppTableViewCell.xib */; };
 		FB4D6F6420FAB476000F953A /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D6F6320FAB476000F953A /* Designable.swift */; };
 		FB4D6F6620FAB4FF000F953A /* ReusableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D6F6520FAB4FF000F953A /* ReusableCells.swift */; };
-		FB4D6F6820FABCA2000F953A /* UITableView+MainThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D6F6720FABCA2000F953A /* UITableView+MainThread.swift */; };
 		FB4D6F6A20FB966C000F953A /* UINavigationBar+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D6F6920FB966C000F953A /* UINavigationBar+Shadow.swift */; };
 		FB4D6F6C20FB972C000F953A /* SearchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4D6F6B20FB972C000F953A /* SearchType.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		FB4D6F6020FAB1FC000F953A /* AppTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppTableViewCell.xib; sourceTree = "<group>"; };
 		FB4D6F6320FAB476000F953A /* Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		FB4D6F6520FAB4FF000F953A /* ReusableCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCells.swift; sourceTree = "<group>"; };
-		FB4D6F6720FABCA2000F953A /* UITableView+MainThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+MainThread.swift"; sourceTree = "<group>"; };
 		FB4D6F6920FB966C000F953A /* UINavigationBar+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Shadow.swift"; sourceTree = "<group>"; };
 		FB4D6F6B20FB972C000F953A /* SearchType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,7 +174,6 @@
 				FB4D6F4F20FAA461000F953A /* Bundle+JSON.swift */,
 				FB4D6F5120FAA6A7000F953A /* String+CasePrefix.swift */,
 				FB4D6F5520FAAA96000F953A /* UIViewController+Child.swift */,
-				FB4D6F6720FABCA2000F953A /* UITableView+MainThread.swift */,
 				FB4D6F6920FB966C000F953A /* UINavigationBar+Shadow.swift */,
 				FB02835620FBE5AB00D7E9D7 /* Array+SafeIndex.swift */,
 				FB4D6F5720FAAB3C000F953A /* AutoLayoutHelper.swift */,
@@ -286,7 +283,6 @@
 				FB4D6F6A20FB966C000F953A /* UINavigationBar+Shadow.swift in Sources */,
 				FB4D6F5620FAAA96000F953A /* UIViewController+Child.swift in Sources */,
 				FB4D6F6420FAB476000F953A /* Designable.swift in Sources */,
-				FB4D6F6820FABCA2000F953A /* UITableView+MainThread.swift in Sources */,
 				FB4D6F4420FA9E97000F953A /* SuggestedTermsTableViewController.swift in Sources */,
 				FB4D6F4620FA9EB2000F953A /* SuggestedTermTableViewCell.swift in Sources */,
 				FB4D6F6120FAB1FC000F953A /* AppTableViewCell.swift in Sources */,
